@@ -1,0 +1,95 @@
+ExeStack:
+(Ref(int) v;(new(v, 20);(Ref(Ref(int)) a;(new(a, v);(print(rH(v));print(rH(rH(a)) + 5))))))
+SymTable:
+Out:
+FileTable:
+-------------------------------------------------------------------
+ExeStack:
+Ref(int) v
+(new(v, 20);(Ref(Ref(int)) a;(new(a, v);(print(rH(v));print(rH(rH(a)) + 5)))))
+SymTable:
+Out:
+FileTable:
+-------------------------------------------------------------------
+ExeStack:
+(new(v, 20);(Ref(Ref(int)) a;(new(a, v);(print(rH(v));print(rH(rH(a)) + 5)))))
+SymTable:
+v --> (0, int)
+Out:
+FileTable:
+-------------------------------------------------------------------
+ExeStack:
+new(v, 20)
+(Ref(Ref(int)) a;(new(a, v);(print(rH(v));print(rH(rH(a)) + 5))))
+SymTable:
+v --> (0, int)
+Out:
+FileTable:
+-------------------------------------------------------------------
+ExeStack:
+(Ref(Ref(int)) a;(new(a, v);(print(rH(v));print(rH(rH(a)) + 5))))
+SymTable:
+v --> (1, int)
+Out:
+FileTable:
+-------------------------------------------------------------------
+ExeStack:
+Ref(Ref(int)) a
+(new(a, v);(print(rH(v));print(rH(rH(a)) + 5)))
+SymTable:
+v --> (1, int)
+Out:
+FileTable:
+-------------------------------------------------------------------
+ExeStack:
+(new(a, v);(print(rH(v));print(rH(rH(a)) + 5)))
+SymTable:
+a --> (0, Ref(int))
+v --> (1, int)
+Out:
+FileTable:
+-------------------------------------------------------------------
+ExeStack:
+new(a, v)
+(print(rH(v));print(rH(rH(a)) + 5))
+SymTable:
+a --> (0, Ref(int))
+v --> (1, int)
+Out:
+FileTable:
+-------------------------------------------------------------------
+ExeStack:
+(print(rH(v));print(rH(rH(a)) + 5))
+SymTable:
+a --> (2, Ref(int))
+v --> (1, int)
+Out:
+FileTable:
+-------------------------------------------------------------------
+ExeStack:
+print(rH(v))
+print(rH(rH(a)) + 5)
+SymTable:
+a --> (2, Ref(int))
+v --> (1, int)
+Out:
+FileTable:
+-------------------------------------------------------------------
+ExeStack:
+print(rH(rH(a)) + 5)
+SymTable:
+a --> (2, Ref(int))
+v --> (1, int)
+Out:
+20
+FileTable:
+-------------------------------------------------------------------
+ExeStack:
+SymTable:
+a --> (2, Ref(int))
+v --> (1, int)
+Out:
+20
+25
+FileTable:
+-------------------------------------------------------------------

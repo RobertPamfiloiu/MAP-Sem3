@@ -1,0 +1,13 @@
+Id: 4
+ExeStack:
+[(int v;(Ref(int) a;(v=10;(new(a, 22);(fork((wH(a, 30);(v=32;(print(v);print(rH(a))))));(print(v);print(rH(a))))))))]
+SymTable:
+{}
+Out:
+
+FileTable:
+[]
+Heap:
+
+---------------------------------
+
